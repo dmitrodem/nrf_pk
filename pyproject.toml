@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nrf_pk"
+version = "0.0.6"
+authors = [
+  { name="Dmitriy Dyomin", email="dmitrodem@gmail.com" },
+]
+description = "Finds ECDSA public key in Nordic bootloader image"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "protobuf",
+    "click",
+    "ecdsa"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+nrf-find-pk = "nrf_pk.find_pk:find_pk"
+
+[project.urls]
+"Homepage" = "https://github.com/dmitrodem/nrf_pk"
+"Bug Tracker" = "https://github.com/dmitrodem/nrf_pk/issues"
